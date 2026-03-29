@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mozzi Assessoria — Assessoria em Eventos</title>
+    <meta name="description" content="Assessoria especializada em casamentos, aniversários e eventos corporativos com execução impecável." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ═══ LOADER ═══ -->
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="loader__brand">
+        <span class="loader__mark">m.</span>
+        <span class="loader__name" id="loaderName">Mozzi Assessoria</span>
+      </div>
+      <div class="loader__bar-wrap"><div class="loader__bar"></div></div>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <header class="hero">
+      <img class="hero__image" src="Assets/BGimg01.jpg" alt="Salão elegante" />
+      <div class="hero__shade"></div>
+      <div class="hero__glow hero__glow--top"></div>
+      <div class="hero__glow hero__glow--bottom"></div>
+
+      <nav class="nav">
+        <div class="nav__center">
+          <a class="brand" href="#"><span class="brand__mark">m.</span></a>
+          <span class="brand__name">Mozzi Assessoria</span>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Assessoria<br>em Eventos.</h1>
+        <div class="hero__actions">
+          <button class="button button--primary" id="btnProposta">Solicitar proposta</button>
+        </div>
+        <p class="hero__meta">Casamentos &nbsp;·&nbsp; Aniversários &nbsp;·&nbsp; Corporativo</p>
+      </div>
+    </header>
+
+    <!-- ═══ BENTO ═══ -->
+    <section class="bento-section">
+      <div class="bento-section__inner">
+        <p class="bento-section__eyebrow">O que fazemos</p>
+        <h2 class="bento-section__title">Cada evento,<br>uma assinatura.</h2>
+
+        <div class="bento-grid">
+
+          <!-- Card grande: imagem cobre tudo, texto embaixo em overlay glass -->
+          <div class="bento-card bento-card--large">
+            <img class="bento-card__bg" src="Assets/insta01.jpg" alt="Casamento Vittoria e Matheus" />
+            <div class="bento-card__overlay-gradient"></div>
+            <div class="bento-card__inner">
+              <span class="bento-card__tag">Casamentos</span>
+              <h3 class="bento-card__title">Do sim ao<br>altar perfeito.</h3>
+              <p class="bento-card__desc">Planejamos cada detalhe do grande dia com cuidado, elegância e execução impecável.</p>
+            </div>
+            <span class="bento-card__num">01</span>
+          </div>
+
+          <!-- Card médio 1 -->
+          <div class="bento-card bento-card--medium">
+            <div class="bento-card__inner">
+              <span class="bento-card__tag">Aniversários</span>
+              <h3 class="bento-card__title">Celebrar<br>com estilo.</h3>
+              <p class="bento-card__desc">De 15 anos a bodas de ouro — cada data merece ser inesquecível.</p>
+            </div>
+            <span class="bento-card__num">02</span>
+          </div>
+
+          <!-- Card médio 2 -->
+          <div class="bento-card bento-card--medium">
+            <div class="bento-card__inner">
+              <span class="bento-card__tag">Corporativo</span>
+              <h3 class="bento-card__title">Eventos que<br>geram resultado.</h3>
+              <p class="bento-card__desc">Lançamentos e experiências corporativas com presença de marca.</p>
+            </div>
+            <span class="bento-card__num">03</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ COMO FUNCIONA ═══════════════════════ -->
+    <section class="process-section" id="process">
+      
+      <!-- Interactive background images -->
+      <div class="process__bg-frames">
+        <img class="process__bg-frame is-active" id="processImg0" src="Assets/insta01.jpg" alt="" aria-hidden="true" />
+        <img class="process__bg-frame" id="processImg1" src="Assets/insta02.jpg" alt="" aria-hidden="true" />
+        <img class="process__bg-frame" id="processImg2" src="Assets/insta03.jpg" alt="" aria-hidden="true" />
+        <img class="process__bg-frame" id="processImg3" src="Assets/insta04.jpg" alt="" aria-hidden="true" />
+        <div class="process__bg-overlay"></div>
+      </div>
+
+      <!-- Sticky wrapper -->
+      <div class="process-section__inner">
+        <!-- Giant number now constrained to the sticky wrapper so it doesn't jump out -->
+        <div class="process__bg-num" id="processBgNum" aria-hidden="true">01</div>
+        <div class="process__header">
+          <p class="process__eyebrow">Processo</p>
+          <h2 class="process__title">Como<br>funciona.</h2>
+        </div>
+
+        <div class="process__track">
+
+          <!-- Linha de progresso vertical -->
+          <div class="process__line" aria-hidden="true">
+            <div class="process__line-fill" id="processLineFill"></div>
+          </div>
+
+          <!-- Steps -->
+          <div class="process__steps">
+
+            <div class="process__step" data-step="1">
+              <div class="process__step-dot"></div>
+              <div class="process__step-body">
+                <span class="process__step-index">01</span>
+                <h3 class="process__step-title">Primeiro contato</h3>
+                <p class="process__step-desc">Tudo começa com uma conversa. Entendemos seus sonhos, o perfil do evento e o que faz o seu momento ser único.</p>
+              </div>
+            </div>
+
+            <div class="process__step" data-step="2">
+              <div class="process__step-dot"></div>
+              <div class="process__step-body">
+                <span class="process__step-index">02</span>
+                <h3 class="process__step-title">Planejamento</h3>
+                <p class="process__step-desc">Construímos juntos o conceito visual, o cronograma, os fornecedores — cada detalhe pensado para refletir quem você é.</p>
+              </div>
+            </div>
+
+            <div class="process__step" data-step="3">
+              <div class="process__step-dot"></div>
+              <div class="process__step-body">
+                <span class="process__step-index">03</span>
+                <h3 class="process__step-title">Execução</h3>
+                <p class="process__step-desc">No dia do evento, nossa equipe cuida de tudo. Você aproveita cada momento enquanto garantimos que a magia aconteça.</p>
+              </div>
+            </div>
+
+            <div class="process__step" data-step="4">
+              <div class="process__step-dot"></div>
+              <div class="process__step-body">
+                <span class="process__step-index">04</span>
+                <h3 class="process__step-title">Memória</h3>
+                <p class="process__step-desc">O evento termina, a memória fica. Finalizamos com cuidado para que cada lembrança valha cada detalhe planejado.</p>
+              </div>
+            </div>
+
+          </div><!-- /steps -->
+        </div><!-- /track -->
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS (Marquee + Glass) ═══ -->
+    <section class="testimonials-section">
+      <!-- Infinite Marquee in the background -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__inner">
+          <span class="marquee__text">AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; </span>
+          <span class="marquee__text">AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; AMADOS POR NOSSOS CLIENTES &nbsp;✦&nbsp; </span>
+        </div>
+      </div>
+
+      <div class="testimonials__inner">
+        
+        <div class="testi-card testi-card--photo-01">
+          <svg class="testi-card__quote" width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)"><path d="M14.017 18L14.017 14.923C14.017 12.062 14.779 9.697 16.303 7.854C17.265 6.69 18.257 5.756 19.349 5L21.059 6.22C19.866 7.218 18.89 8.243 18.151 9.387C17.618 10.22 17.214 11.232 16.946 12.4H21V18H14.017ZM3.01709 18L3.01709 14.923C3.01709 12.062 3.77909 9.697 5.30309 7.854C6.26509 6.69 7.25709 5.756 8.34909 5L10.059 6.22C8.86609 7.218 7.89009 8.243 7.15109 9.387C6.61809 10.22 6.21409 11.232 5.94609 12.4H10V18H3.01709Z"/></svg>
+          <p class="testi-card__text">A Mozzi conduziu nosso casamento com sensibilidade, organização e uma atenção impecável aos detalhes. Conseguimos viver cada instante com tranquilidade.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="Assets/testimonial-photo-01.jpg" alt="Vittoria & Matheus" />
+            <div class="testi-card__meta">
+              <span class="testi-card__name">Vittoria &amp; Matheus</span>
+              <span class="testi-card__role">Casamento ao ar livre</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card testi-card--photo-02">
+          <svg class="testi-card__quote" width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)"><path d="M14.017 18L14.017 14.923C14.017 12.062 14.779 9.697 16.303 7.854C17.265 6.69 18.257 5.756 19.349 5L21.059 6.22C19.866 7.218 18.89 8.243 18.151 9.387C17.618 10.22 17.214 11.232 16.946 12.4H21V18H14.017ZM3.01709 18L3.01709 14.923C3.01709 12.062 3.77909 9.697 5.30309 7.854C6.26509 6.69 7.25709 5.756 8.34909 5L10.059 6.22C8.86609 7.218 7.89009 8.243 7.15109 9.387C6.61809 10.22 6.21409 11.232 5.94609 12.4H10V18H3.01709Z"/></svg>
+          <p class="testi-card__text">No grande dia, tivemos leveza para aproveitar tudo. A equipe trouxe calma, direção e um cuidado raro do início ao fim da celebração.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="Assets/testimonial-photo-02.jpg" alt="Casal assessorado pela Mozzi" />
+            <div class="testi-card__meta">
+              <span class="testi-card__name">Casal assessorado</span>
+              <span class="testi-card__role">Casamento intimista</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="signature-section" aria-labelledby="signature-title">
+      <div class="signature-section__inner">
+        <p class="signature__eyebrow">O que sustenta tudo</p>
+        <h2 class="signature__title" id="signature-title">Calma para viver. Controle para celebrar.</h2>
+        <p class="signature__desc">Curadoria, coordena&ccedil;&atilde;o e presen&ccedil;a para que o evento aconte&ccedil;a com leveza.</p>
+
+        <div class="signature__pillars">
+          <article class="signature__pillar">
+            <span class="signature__pillar-title">Curadoria</span>
+            <p class="signature__pillar-text">Escolhas coerentes.</p>
+          </article>
+
+          <article class="signature__pillar">
+            <span class="signature__pillar-title">Coordena&ccedil;&atilde;o</span>
+            <p class="signature__pillar-text">Bastidores no ritmo certo.</p>
+          </article>
+
+          <article class="signature__pillar">
+            <span class="signature__pillar-title">Presen&ccedil;a</span>
+            <p class="signature__pillar-text">Leveza no grande dia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRICING / PACOTES ═══ -->
+    <section class="pricing-section" id="planos">
+      <div class="pricing-section__inner">
+        <div class="pricing__header">
+          <p class="pricing__eyebrow">Investimento</p>
+          <h2 class="pricing__title">Nossos Pacotes</h2>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Plano Essencial -->
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">Essencial</h3>
+            <p class="pricing-card__desc">Ideal para eventos intimistas e planejamento guiado.</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">5.000</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Consultoria básica</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Decoração simples</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Até 50 pessoas</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Suporte no dia do evento</li>
+            </ul>
+            <button class="button button--secondary button--full open-modal-btn">Solicitar Orçamento</button>
+          </div>
+
+          <!-- Plano Premium (Destaque) -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__badge">Mais Escolhido</div>
+            <h3 class="pricing-card__name">Premium</h3>
+            <p class="pricing-card__desc">A experiência completa para celebrar sem preocupações.</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">12.000</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Consultoria completa</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Decoração sofisticada</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Até 150 convidados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Suporte 24h via WhatsApp</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Coordenação de fornecedores</li>
+            </ul>
+            <button class="button button--primary button--full open-modal-btn">Solicitar Orçamento</button>
+          </div>
+
+          <!-- Plano Luxo -->
+          <div class="pricing-card">
+            <h3 class="pricing-card__name">Luxo</h3>
+            <p class="pricing-card__desc">Eventos grandiosos criados sob medida para você.</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount pricing-card__amount--custom">Personalizado</span>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Consultoria VIP presencial</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Decoração exclusiva de alto luxo</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Sem limite de convidados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Suporte 100% dedicado</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg> Coordenação total do evento</li>
+            </ul>
+            <button class="button button--secondary button--full open-modal-btn">Solicitar Orçamento</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INSTAGRAM ═══ -->
+    <section class="insta-section">
+      <div class="arc-separator" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 C360,120 1080,120 1440,0 L1440,0 L0,0 Z" fill="#0a0806"/>
+        </svg>
+      </div>
+      <div class="insta-section__inner">
+        <p class="insta-section__eyebrow">@mozzisassessoria</p>
+        <h2 class="insta-section__title">No Instagram</h2>
+        <p class="insta-section__sub">Acompanhe nossa história</p>
+        <div class="insta-grid">
+          <a class="insta-card" href="https://www.instagram.com/p/DWSXJZrkVET/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta01.jpg" alt="Vittoria e Matheus" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">Vittoria &amp; Matheus</span></div></div>
+          </a>
+          <a class="insta-card" href="https://www.instagram.com/reel/DWR38zSDwDs/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta02.jpg" alt="Tia Nazaré" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">80 anos Tia Nazaré</span></div></div>
+          </a>
+          <a class="insta-card" href="https://www.instagram.com/reel/DWRtBKpERqR/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta03.jpg" alt="Memórias" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">Memórias que ficam</span></div></div>
+          </a>
+          <a class="insta-card" href="https://www.instagram.com/reel/DWRrG6pkRIe/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta04.jpg" alt="Cada detalhe" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">Cada detalhe importa</span></div></div>
+          </a>
+          <a class="insta-card" href="https://www.instagram.com/reel/DWRpu62EVk4/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta05.jpg" alt="Gratidão" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">Gratidão &amp; cuidado</span></div></div>
+          </a>
+          <a class="insta-card" href="https://www.instagram.com/reel/DWHqmHbifWr/" target="_blank" rel="noopener">
+            <div class="insta-card__img-wrap"><img src="Assets/insta06.jpg" alt="Devanildo e Paloma" loading="lazy" /><div class="insta-card__overlay"><svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span class="insta-card__caption">Devanildo &amp; Paloma</span></div></div>
+          </a>
+        </div>
+        <a class="insta-section__link" href="https://www.instagram.com/mozzisassessoria/" target="_blank" rel="noopener">
+          Ver mais no Instagram
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <span class="brand__mark footer__mark">m.</span>
+      <p class="footer__text">© 2025 Mozzi Assessoria — Todos os direitos reservados</p>
+    </footer>
+
+    <!-- ═══ MODAL CONTATO ═══ -->
+    <div class="modal" id="contactModal" aria-hidden="true">
+      <div class="modal__overlay" id="modalOverlay"></div>
+      <div class="modal__content modal__grid">
+        <button class="modal__close" id="modalClose" aria-label="Fechar modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6L18 18"/></svg>
+        </button>
+        
+        <!-- Left: Calendar -->
+        <div class="modal__col modal__cal-col">
+          <h3 class="modal__title">Quando?</h3>
+          <p class="modal__desc">Selecione uma data disponível.</p>
+          
+          <div class="calendar">
+            <div class="calendar__header">
+              <button type="button" class="calendar__btn" id="calPrev" aria-label="Mês anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <span class="calendar__month" id="calMonth"></span>
+              <button type="button" class="calendar__btn" id="calNext" aria-label="Próximo mês">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+            <div class="calendar__weekdays">
+              <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+            </div>
+            <div class="calendar__grid" id="calGrid"></div>
+            <div class="calendar__legend">
+              <span class="legend-item"><span class="legend-dot legend-dot--avail"></span>Disponível</span>
+              <span class="legend-item"><span class="legend-dot legend-dot--busy"></span>Ocupado</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Form -->
+        <div class="modal__col modal__form-col">
+          <h3 class="modal__title">Detalhes</h3>
+          <p class="modal__desc">Preencha para receber sua proposta.</p>
+          
+          <form class="modal__form" action="#" method="POST" id="propostaForm">
+            <input type="hidden" id="selectedDate" name="selectedDate" required />
+            
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Seu prenome e nome</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" required placeholder=" " />
+              <label for="phone">Telefone / WhatsApp</label>
+            </div>
+            <div class="form-group">
+              <select id="type" name="eventType" required>
+                <option value="" disabled selected>Tipo de evento</option>
+                <option value="casamento">Casamento</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="corporativo">Corporativo</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            
+            <div class="upsell-group" aria-labelledby="upsellTitle">
+              <div class="upsell-group__header">
+                <p class="upsell-group__eyebrow">Opcional</p>
+                <h4 class="upsell-group__title" id="upsellTitle">Posso incluir estes extras na proposta</h4>
+              </div>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="upsell" value="Cobertura de mídia e fotos by Mozzi" />
+                <div class="custom-checkbox__box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="custom-checkbox__text">
+                  <strong>Cobertura de mídia e fotos by Mozzi</strong>
+                </span>
+              </label>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="upsell" value="RSVP e gestão de convidados" />
+                <div class="custom-checkbox__box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="custom-checkbox__text">
+                  <strong>RSVP e gestão de convidados</strong>
+                </span>
+              </label>
+            </div>
+
+            <button class="button button--primary button--full" type="submit" id="submitBtn" disabled style="opacity:0.6; pointer-events:none;">Escolha uma data</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script>
+      /* ── Loader ── */
+      (function () {
+        document.body.classList.add('no-scroll');
+        const loader = document.getElementById('loader');
+        const nameEl = document.getElementById('loaderName');
+        const text = nameEl.textContent;
+        nameEl.innerHTML = text.split('').map((ch, i) =>
+          `<span class="loader__letter" style="animation-delay:${0.3 + i * 0.045}s">${ch === ' ' ? '&nbsp;' : ch}</span>`
+        ).join('');
+        setTimeout(() => {
+          loader.classList.add('loader--done');
+          document.body.classList.remove('no-scroll');
+          loader.addEventListener('transitionend', () => { loader.style.display = 'none'; }, { once: true });
+        }, 2400);
+      })();
+
+      /* ── Como Funciona — scroll-driven sticky + images ── */
+      (function () {
+        const section   = document.getElementById('process');
+        const steps     = document.querySelectorAll('.process__step');
+        const bgNum     = document.getElementById('processBgNum');
+        const lineFill  = document.getElementById('processLineFill');
+        const bgFrames  = document.querySelectorAll('.process__bg-frame');
+        const total     = steps.length;
+        let   lastIdx   = -1;
+
+        function setActive(idx) {
+          idx = Math.max(0, Math.min(total - 1, idx));
+          if (idx === lastIdx) return;
+          lastIdx = idx;
+
+          /* Text steps */
+          steps.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+
+          /* Background frames */
+          bgFrames.forEach((img, i) => img.classList.toggle('is-active', i === idx));
+
+          /* Big background number cross-fade */
+          const newNum = String(idx + 1).padStart(2, '0');
+          if (bgNum.textContent !== newNum) {
+            bgNum.classList.add('num-exit');
+            setTimeout(() => {
+              bgNum.textContent = newNum;
+              bgNum.classList.remove('num-exit');
+              bgNum.classList.add('num-enter');
+              setTimeout(() => bgNum.classList.remove('num-enter'), 350);
+            }, 200);
+          }
+
+          /* Vertical line fill: 0% on step 0, 100% on last step */
+          const pct = (idx / (total - 1)) * 100;
+          lineFill.style.height = pct + '%';
+        }
+
+        function onScroll() {
+          const sectionTop    = section.getBoundingClientRect().top + window.scrollY;
+          const scrollIntoSection = window.scrollY - sectionTop;
+          /* scrollable distance = totalHeight - 1 viewport */
+          const scrollableH   = section.offsetHeight - window.innerHeight;
+          const progress      = Math.max(0, Math.min(1, scrollIntoSection / scrollableH));
+          /* map 0-1 progress to 0-(total-1) steps */
+          const idx = Math.round(progress * (total - 1));
+          setActive(idx);
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); // init
+      })();
+
+      /* ── Modal Contato & Calendar ── */
+      (function() {
+        const modal = document.getElementById('contactModal');
+        const btnOpens = document.querySelectorAll('#btnProposta, .open-modal-btn');
+        const btnClose = document.getElementById('modalClose');
+        const overlay = document.getElementById('modalOverlay');
+        const form = document.getElementById('propostaForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const selectedDateInput = document.getElementById('selectedDate');
+        const upsellInputs = Array.from(form.querySelectorAll('input[name="upsell"]'));
+
+        // Calendar elements
+        const calMonth = document.getElementById('calMonth');
+        const calGrid = document.getElementById('calGrid');
+        const btnPrev = document.getElementById('calPrev');
+        const btnNext = document.getElementById('calNext');
+
+        let currentDate = new Date();
+        let selectedDate = null;
+        const WHATSAPP_DESTINATION = ''; // Ex.: 5511999999999
+
+        // Modal Logic
+        function resetSubmitButton() {
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+
+          if (selectedDateInput.value) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            submitBtn.style.pointerEvents = 'auto';
+            submitBtn.textContent = 'Enviar solicitação';
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.6';
+          submitBtn.style.pointerEvents = 'none';
+          submitBtn.textContent = 'Escolha uma data';
+        }
+
+        function openModal() {
+          modal.classList.add('is-open');
+          document.body.classList.add('no-scroll');
+          resetSubmitButton();
+          renderCalendar(); // ensure calendar is fresh
+        }
+        function closeModal() {
+          modal.classList.remove('is-open');
+          document.body.classList.remove('no-scroll');
+        }
+
+        btnOpens.forEach(btn => btn.addEventListener('click', openModal));
+        btnClose.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+
+        function collectLeadPayload() {
+          const eventTypeField = document.getElementById('type');
+
+          return {
+            date: selectedDateInput.value,
+            name: document.getElementById('name').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            eventType: eventTypeField.options[eventTypeField.selectedIndex]?.text || eventTypeField.value,
+            upsells: upsellInputs.filter(input => input.checked).map(input => input.value)
+          };
+        }
+
+        function buildWhatsAppUrl(payload) {
+          if (!WHATSAPP_DESTINATION) return null;
+
+          const upsells = payload.upsells.length
+            ? payload.upsells.map(item => `- ${item}`).join('\n')
+            : '- Nenhum extra selecionado';
+
+          const message = [
+            'Nova solicitação de proposta',
+            '',
+            `Data: ${payload.date}`,
+            `Nome: ${payload.name}`,
+            `Telefone: ${payload.phone}`,
+            `Tipo de evento: ${payload.eventType}`,
+            '',
+            'Upsells de interesse:',
+            upsells
+          ].join('\n');
+
+          return `https://wa.me/${WHATSAPP_DESTINATION}?text=${encodeURIComponent(message)}`;
+        }
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if(!selectedDateInput.value) return; // double check
+
+          const payload = collectLeadPayload();
+          const whatsappUrl = buildWhatsAppUrl(payload);
+
+          if (whatsappUrl) {
+            submitBtn.textContent = 'Abrindo WhatsApp...';
+            submitBtn.style.background = 'var(--gold)';
+            submitBtn.style.color = 'var(--bg)';
+            window.open(whatsappUrl, '_blank', 'noopener');
+            setTimeout(() => closeModal(), 1500);
+          } else {
+            submitBtn.textContent = 'Configure o destino do lead';
+            console.table(payload);
+          }
+        });
+
+        // Calendar Logic
+        const months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+        // Simulation: "busy" days logic (pseudo-random based on date)
+        function isBusy(year, month, day) {
+           const today = new Date();
+           today.setHours(0,0,0,0);
+           const checkDate = new Date(year, month, day);
+           
+           // Past dates are "busy" or not selectable
+           if (checkDate < today) return true;
+           
+           // Let's decide arbitrarily: if the day number is divisible by 5 or ends in 3, it's busy! (Makes it look randomish)
+           if (day % 5 === 0 || day % 10 === 3) return true;
+           return false;
+        }
+
+        function renderCalendar() {
+          const year = currentDate.getFullYear();
+          const month = currentDate.getMonth();
+          
+          calMonth.textContent = `${months[month]} ${year}`;
+          calGrid.innerHTML = '';
+          
+          const firstDay = new Date(year, month, 1).getDay();
+          const daysInMonth = new Date(year, month + 1, 0).getDate();
+          
+          // Fill blanks before 1st of month
+          for(let i=0; i<firstDay; i++) {
+            const blank = document.createElement('div');
+            blank.classList.add('cal-day', 'cal-day--empty');
+            calGrid.appendChild(blank);
+          }
+          
+          // Fill days
+          for(let d=1; d<=daysInMonth; d++) {
+            const dayEl = document.createElement('button');
+            dayEl.type = 'button';
+            dayEl.classList.add('cal-day');
+            dayEl.textContent = d;
+            
+            const busy = isBusy(year, month, d);
+            const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+
+            if(busy) {
+              dayEl.classList.add('cal-day--busy');
+              dayEl.disabled = true;
+            } else {
+              dayEl.classList.add('cal-day--avail');
+              dayEl.addEventListener('click', () => selectDate(year, month, d, dayEl));
+            }
+
+            // Check if it's currently selected
+            if(selectedDate && selectedDate.year === year && selectedDate.month === month && selectedDate.day === d) {
+              dayEl.classList.add('is-selected');
+            }
+            
+            calGrid.appendChild(dayEl);
+          }
+        }
+
+        function selectDate(year, month, d, el) {
+          // Remove previous selection
+          const prev = calGrid.querySelector('.is-selected');
+          if(prev) prev.classList.remove('is-selected');
+          
+          // Select new
+          el.classList.add('is-selected');
+          selectedDate = { year, month, day: d };
+          
+          // Format date for input: YYYY-MM-DD
+          const formatted = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+          selectedDateInput.value = formatted;
+          
+          // Enable submit button
+          resetSubmitButton();
+        }
+
+        btnPrev.addEventListener('click', () => {
+          currentDate.setMonth(currentDate.getMonth() - 1);
+          renderCalendar();
+        });
+
+        btnNext.addEventListener('click', () => {
+          currentDate.setMonth(currentDate.getMonth() + 1);
+          renderCalendar();
+        });
+
+        // initial render (deferred until open, but good to have ready)
+        resetSubmitButton();
+        renderCalendar();
+      })();
+    </script>
+  </body>
+</html>
