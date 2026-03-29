@@ -200,26 +200,60 @@
     </section>
 
     <section class="signature-section" aria-labelledby="signature-title">
+
+      <!-- Ambient decoration -->
+      <div class="sig__deco-line sig__deco-line--h" aria-hidden="true"></div>
+      <div class="sig__deco-line sig__deco-line--v" aria-hidden="true"></div>
+      <div class="sig__ambient" aria-hidden="true"></div>
+
       <div class="signature-section__inner">
-        <p class="signature__eyebrow">O que sustenta tudo</p>
-        <h2 class="signature__title" id="signature-title">Calma para viver. Controle para celebrar.</h2>
-        <p class="signature__desc">Curadoria, coordena&ccedil;&atilde;o e presen&ccedil;a para que o evento aconte&ccedil;a com leveza.</p>
 
-        <div class="signature__pillars">
-          <article class="signature__pillar">
-            <span class="signature__pillar-title">Curadoria</span>
-            <p class="signature__pillar-text">Escolhas coerentes.</p>
+        <!-- ── Left editorial col ── -->
+        <div class="sig__left">
+          <p class="signature__eyebrow" data-sig-reveal>Nossa filosofia</p>
+
+          <h2 class="signature__title" id="signature-title" data-sig-reveal>
+            Você vive<br>
+            <em>o momento.</em><br>
+            A gente cuida<br>do resto.
+          </h2>
+
+          <p class="signature__desc" data-sig-reveal>
+            Por tr&aacute;s de cada celebra&ccedil;&atilde;o perfeita existe uma estrutura invis&iacute;vel &mdash; mas presente em cada detalhe, cada fornecedor, cada segundo do seu grande dia.
+          </p>
+
+          <div class="sig__cta" data-sig-reveal>
+            <button class="button button--primary open-modal-btn">Solicitar proposta</button>
+          </div>
+        </div>
+
+        <!-- ── Right pillars col ── -->
+        <div class="sig__right">
+
+          <article class="sig-pillar" data-sig-reveal>
+            <div class="sig-pillar__num" aria-hidden="true">01</div>
+            <div class="sig-pillar__body">
+              <span class="sig-pillar__title">Curadoria</span>
+              <p class="sig-pillar__text">Cada fornecedor, decora&ccedil;&atilde;o e detalhe selecionado com crit&eacute;rio — para refletir exatamente quem voc&ecirc; &eacute;.</p>
+            </div>
           </article>
 
-          <article class="signature__pillar">
-            <span class="signature__pillar-title">Coordena&ccedil;&atilde;o</span>
-            <p class="signature__pillar-text">Bastidores no ritmo certo.</p>
+          <article class="sig-pillar" data-sig-reveal>
+            <div class="sig-pillar__num" aria-hidden="true">02</div>
+            <div class="sig-pillar__body">
+              <span class="sig-pillar__title">Coordena&ccedil;&atilde;o</span>
+              <p class="sig-pillar__text">Nos bastidores, garantimos que tudo aconte&ccedil;a na hora certa, com as pessoas certas — sem imprevistos visiveis.</p>
+            </div>
           </article>
 
-          <article class="signature__pillar">
-            <span class="signature__pillar-title">Presen&ccedil;a</span>
-            <p class="signature__pillar-text">Leveza no grande dia.</p>
+          <article class="sig-pillar" data-sig-reveal>
+            <div class="sig-pillar__num" aria-hidden="true">03</div>
+            <div class="sig-pillar__body">
+              <span class="sig-pillar__title">Presen&ccedil;a</span>
+              <p class="sig-pillar__text">No grande dia nossa equipe &eacute; discreta, &aacute;gil e atenta. Voc&ecirc; s&oacute; sente a leveza de estar totalmente presente.</p>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -698,6 +732,26 @@
         // initial render (deferred until open, but good to have ready)
         resetSubmitButton();
         renderCalendar();
+      })();
+
+      /* ── Signature Section — Scroll Reveal ── */
+      (function () {
+        const reveals = document.querySelectorAll('[data-sig-reveal]');
+        // Assign stagger delays
+        reveals.forEach((el, i) => {
+          el.style.transitionDelay = `${i * 100}ms`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(el => observer.observe(el));
       })();
     </script>
   </body>
