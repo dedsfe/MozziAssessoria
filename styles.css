@@ -1861,15 +1861,52 @@ a {
 }
 
 @media (max-width: 640px) {
-  .hero { min-height: auto; }
+  .hero {
+    min-height: 100svh;
+    padding: 7rem 0 2.5rem;
+  }
+
+  .nav {
+    padding-top: 1.35rem;
+  }
+
+  .nav__center {
+    gap: 0.45rem;
+  }
+
+  .brand__mark {
+    width: 2.65rem;
+    height: 2.65rem;
+    font-size: 1.15rem;
+  }
+
+  .brand__name {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+  }
 
   .hero__content {
     width: calc(100% - 2rem);
-    margin-top: 3.5rem;
-    gap: 1.75rem;
+    min-height: calc(100svh - 9.5rem);
+    margin-top: 0;
+    align-content: center;
+    gap: 1.35rem;
   }
 
-  .hero__title { font-size: clamp(3.6rem, 18vw, 5rem); }
+  .hero__title {
+    font-size: clamp(3.35rem, 16vw, 4.7rem);
+    line-height: 0.94;
+  }
+
+  .hero__actions {
+    margin-top: 0.2rem;
+  }
+
+  .hero__meta {
+    margin-top: 0.55rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.22em;
+  }
 
   .bento-section { padding: 4rem 0 3.5rem; }
 
