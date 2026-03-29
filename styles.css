@@ -536,6 +536,14 @@ a {
   transform: scale(1);
 }
 
+#processImg1 {
+  object-position: center 58%;
+}
+
+#processImg3 {
+  object-position: center 38%;
+}
+
 .process__bg-overlay {
   position: absolute;
   inset: 0;
