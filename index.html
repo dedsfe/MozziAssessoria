@@ -258,6 +258,25 @@
       </div>
     </section>
 
+    <!-- ═══ ABOUT / FOUNDER ═══ -->
+    <section class="about-section">
+      <div class="about-section__inner">
+        <div class="about__image-col" data-about-reveal>
+          <img src="Assets/tati.jpg" alt="Fundadora da Mozzi Assessoria" class="about__img" loading="lazy" />
+        </div>
+        <div class="about__text-col" data-about-reveal>
+          <p class="about__eyebrow">A Alma por Trás</p>
+          <h2 class="about__title">Seu evento, com<br>nossa assinatura.</h2>
+          <div class="about__content">
+            <p>Acreditamos que o luxo não está no excesso, mas na escolha cuidadosa de cada elemento e na paz de espírito de saber que tudo está sob controle.</p>
+            <p>Nossa curadoria nasce da paixão por criar experiências autênticas, onde o seu bom gosto é o protagonista e nossa expertise é a base que sustenta tudo.</p>
+          </div>
+          <p class="about__signature">Tati</p>
+          <span class="about__role">Fundadora & Event Designer</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ PRICING / PACOTES ═══ -->
     <section class="pricing-section" id="planos">
       <div class="pricing-section__inner">
@@ -320,6 +339,67 @@
             </ul>
             <button class="button button--secondary button--full open-modal-btn">Solicitar Orçamento</button>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="faq-section">
+      <div class="faq-section__inner" data-faq-reveal>
+        <div class="faq__header">
+          <p class="faq__eyebrow">Dúvidas Frequentes</p>
+          <h2 class="faq__title">O que você precisa saber.</h2>
+        </div>
+        <div class="faq__list">
+          
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__header">
+              <span class="faq-item__title">Quanto tempo antes devo contratar a assessoria?</span>
+              <div class="faq-item__icon" aria-hidden="true"></div>
+            </summary>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>O ideal é de 12 a 18 meses para o planejamento completo (Premium/Luxo), garantindo os melhores fornecedores. Para assessoria do dia ou eventos menores, 4 a 6 meses de antecedência são suficientes.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__header">
+              <span class="faq-item__title">Vocês realizam eventos fora da cidade/estado?</span>
+              <div class="faq-item__icon" aria-hidden="true"></div>
+            </summary>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>Sim. Atendemos Destination Weddings e eventos corporativos em todo o Brasil. Cuidamos de toda a logística, do planejamento remoto à execução no local.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__header">
+              <span class="faq-item__title">Qual a diferença entre assessoria completa e essencial?</span>
+              <div class="faq-item__icon" aria-hidden="true"></div>
+            </summary>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>A completa (Premium/Luxo) engloba desde a escolha do local e curadoria de fornecedores até o desenho do conceito. A Essencial foca na coordenação do dia e planejamento guiado final para quem já começou a organizar.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__header">
+              <span class="faq-item__title">Como funciona o primeiro passo?</span>
+              <div class="faq-item__icon" aria-hidden="true"></div>
+            </summary>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>Começamos com uma reunião (presencial ou online) focado em entender sua história, estilo e expectativas. A partir dessa conversa, desenhamos uma proposta sob medida, sem compromisso.</p>
+              </div>
+            </div>
+          </details>
 
         </div>
       </div>
@@ -734,12 +814,22 @@
         renderCalendar();
       })();
 
-      /* ── Signature Section — Scroll Reveal ── */
+      /* ── Scroll Reveals (Signature, About, FAQ) ── */
       (function () {
-        const reveals = document.querySelectorAll('[data-sig-reveal]');
-        // Assign stagger delays
-        reveals.forEach((el, i) => {
+        const reveals = [
+          ...document.querySelectorAll('[data-sig-reveal]'),
+          ...document.querySelectorAll('[data-about-reveal]'),
+          ...document.querySelectorAll('[data-faq-reveal]')
+        ];
+
+        // Specific stagger for signature elements
+        document.querySelectorAll('[data-sig-reveal]').forEach((el, i) => {
           el.style.transitionDelay = `${i * 100}ms`;
+        });
+        
+        // About & FAQ stagger
+        document.querySelectorAll('[data-about-reveal]').forEach((el, i) => {
+          el.style.transitionDelay = `${i * 150}ms`;
         });
 
         const observer = new IntersectionObserver((entries) => {
@@ -752,6 +842,20 @@
         }, { threshold: 0.15 });
 
         reveals.forEach(el => observer.observe(el));
+      })();
+
+      /* ── FAQ Accordion Logic (Exclusive Open) ── */
+      (function () {
+        const details = document.querySelectorAll('details[name="faq"]');
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
       })();
     </script>
   </body>
